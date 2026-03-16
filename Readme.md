@@ -50,6 +50,10 @@ This project was a deep dive into **Enterprise Cloud Architecture**. I mastered 
 ### ## What's next for Master Agent
 The journey doesn't stop here! I am excited to integrate **real-time screen context** for live debugging and explore **Agentic Collaboration**, where multiple instances of Master Agent can coordinate via Google Cloud to solve even larger, more complex engineering challenges.
 
+### ## View the Demo and Proof Videos at:
+https://youtu.be/nL8mUalkMWk
+https://youtu.be/SXkdnVke4xU
+
 ---
 
 ## ⚙️ Installation & Setup
