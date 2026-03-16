@@ -1,8 +1,7 @@
 # STEP 1: Create a folder for your project and enter it
-# mkdir gemini-master-agent
-# cd gemini-master-agent
+Download or clone the repository onto your gitdesktop or VSCode.
 
-# STEP 2: Create a Virtual Environment (Crucial for students to avoid messy errors!)
+# STEP 2: Create a Virtual Environment 
 python -m venv venv
 
 # STEP 3: Activate the Virtual Environment
@@ -17,5 +16,13 @@ python -m pip install --upgrade pip
 # STEP 5: Install all the requirements
 pip install -r requirements.txt
 
-# STEP 6: Run the Streamlit application
+# STEP 6: Important steps to set it up
+Make a folder named '.streamlit'. Inside it,
+save a file with name 'secrets.toml' and keep your Gemini Api Key or GCP Project Id along with GCP Sevice account details.
+you can also keep both (more robust)
+
+Also make sure you set the location in the app.py to you GCP ID's location
+In my case it was us-centrall
+
+# STEP 7: Run the Streamlit application
 streamlit run app.py
