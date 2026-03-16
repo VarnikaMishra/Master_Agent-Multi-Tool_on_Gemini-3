@@ -1,0 +1,21 @@
+# STEP 1: Create a folder for your project and enter it
+# mkdir gemini-master-agent
+# cd gemini-master-agent
+
+# STEP 2: Create a Virtual Environment (Crucial for students to avoid messy errors!)
+python -m venv venv
+
+# STEP 3: Activate the Virtual Environment
+# On Windows:
+.\venv\Scripts\activate
+# On Mac/Linux:
+# source venv/bin/activate
+
+# STEP 4: Upgrade pip to ensure smooth installation
+python -m pip install --upgrade pip
+
+# STEP 5: Install all the requirements
+pip install -r requirements.txt
+
+# STEP 6: Run the Streamlit application
+streamlit run app.py
