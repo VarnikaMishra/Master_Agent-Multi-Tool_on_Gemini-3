@@ -1,28 +1,50 @@
-# STEP 1: Create a folder for your project and enter it
-Download or clone the repository onto your gitdesktop or VSCode.
+# ==========================================
+# MASTER AGENT: SETUP & EXECUTION GUIDE
+# ==========================================
+
+# STEP 1: Clone the repository
+# Use Git Desktop or run via terminal:
+git clone <your-repo-link>
+cd <your-repo-name>
 
 # STEP 2: Create a Virtual Environment 
+# This keeps your global Python clean.
 python -m venv venv
 
 # STEP 3: Activate the Virtual Environment
 # On Windows:
 .\venv\Scripts\activate
 # On Mac/Linux:
-# source venv/bin/activate
+source venv/bin/activate
 
-# STEP 4: Upgrade pip to ensure smooth installation
+# STEP 4: Upgrade pip 
 python -m pip install --upgrade pip
 
-# STEP 5: Install all the requirements
+# STEP 5: Install all requirements
+# Ensure requirements.txt is in the root folder.
 pip install -r requirements.txt
 
-# STEP 6: Important steps to set it up
-Make a folder named '.streamlit'. Inside it,
-save a file with name 'secrets.toml' and keep your Gemini Api Key or GCP Project Id along with GCP Sevice account details.
-you can also keep both (more robust)
+# STEP 6: Configure Secrets & Credentials
+# 1. Create a folder named '.streamlit' in the root directory.
+# 2. Inside '.streamlit', create a file named 'secrets.toml'.
+# 3. Add your credentials in this format:
+#
+#    FREE_GEMINI_API_KEY = "your_api_key_here"
+#    GCP_PROJECT_ID = "your_project_id"
+#    HACKATHON_MODE = false  # Toggle to true for Vertex AI logic
+#
+#    [gcp_service_account]
+#    type = "service_account"
+#    project_id = "..."
+#    private_key_id = "..."
+#    private_key = "..."
+#    client_email = "..."
+#    client_id = "..."
+#    ... (paste all fields from your JSON key)
 
-Also make sure you set the location in the app.py to you GCP ID's location
-In my case it was us-centrall
+# STEP 7: Check Location Settings
+# Open 'app.py' and ensure the 'location' variable matches your GCP region.
+# Default: us-central1
 
-# STEP 7: Run the Streamlit application
+# STEP 8: Run the Streamlit application
 streamlit run app.py
